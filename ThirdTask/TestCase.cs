@@ -4,15 +4,13 @@ namespace ThirdTask
 {
     public class TestCase
     {
-        public delegate void Prep();
-        public delegate void Run();
-        public delegate void CleanUp();
+        public delegate void TestMethod();
 
         public int tc_id { get; set; }
         public string Name { get; set; }
-        public CleanUp clean_up { get; set; }
-        public Prep prep { get; set; }
-        public Run run { get; set; }
+        public TestMethod clean_up { get; set; }
+        public TestMethod prep { get; set; }
+        public TestMethod run { get; set; }
         public void execute()
         {
             try
