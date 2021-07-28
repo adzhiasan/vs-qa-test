@@ -14,7 +14,10 @@ namespace FirstTask
             try
             {
                 foreach (FileToCopy file in GetFilesToCopy(path))
+                {
                     file.Copy();
+                    Console.WriteLine($"Файл {file.Name} был успешно скопирован из {file.SourcePath} в {file.DestinationPath}");
+                }
             }
             catch (Exception ex)
             {
