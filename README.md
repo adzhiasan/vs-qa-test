@@ -110,7 +110,7 @@ Execution completed sucessfully!
         Name = "Название теста",
         prep = PrepMethod,
         run = RunMethod,
-        clean_p = CleanUpMethod
+        clean_up = CleanUpMethod
     };
 ```
 Тут свойства <code>prep</code>, <code>run</code>, <code>clean_up</code> - это экземляры делегата <code>TestMethod</code>:
