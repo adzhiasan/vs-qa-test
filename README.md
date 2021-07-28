@@ -21,7 +21,7 @@ Repository for Veeam Software Junior Developer in QA test.
 </config>
 ```  
 ### Подготовка и запуск 
-Для начала необходимо создать конфигурационный файл по примеру с названием CopyConfig.xml. Поиск производится по пути: /QAAutomationTest/FirstTask/bin/Debug/net5.0/CopyConfig.xml. Путь для поиска файла, а также его название, можно изменить в переменной path в методе Main.
+Для начала необходимо создать конфигурационный файл по примеру с названием <code>CopyConfig.xml</code>. Поиск производится по пути: <code>/QAAutomationTest/FirstTask/bin/Debug/net5.0/CopyConfig.xml</code>. Путь для поиска файла, а также его название, можно изменить в переменной path в методе Main.
 ```cs
         static void Main(string[] args)
         {
@@ -38,3 +38,16 @@ Repository for Veeam Software Junior Developer in QA test.
 Далее необходимо запустить решение. Сообщения в консоли укажут на успешное копирование файла либо на ошибку.  
 ## Second Task
 ### Краткое описание
+Дан файл, содержащий имена файлов, алгоритм хэширования (один из <code>MD5/SHA1/SHA256</code>) и соответствующие им хэш-суммы, вычисленные по соответствующему алгоритму и указанные в файле через пробел. В данном проекте реализована программа, читающая данный файл и проверяющая целостность файлов.  
+Пример файла:
+```
+file_01.bin md5 aaeab83fcc93cd3ab003fa8bfd8d8906
+file_02.bin md5 6dc2d05c8374293fe20bc4c22c236e2e
+file_03.bin md5 6dc2d05c8374293fe20bc4c22c236e2e
+file_04.txt sha1 da39a3ee5e6b4b0d3255bfef95601890afd80709
+```
+Вызов  осуществляется через командную строку с передачей двух аргументов: путь к файлу и путь к директории с файлами.
+```
+<program> <path to the input file> <path to the directory containing the files to check>
+```
+### Подготовка и запуск
